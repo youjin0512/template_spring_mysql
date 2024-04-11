@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloworldControler {
     // /helloWorldResponseList/1/10/1
-    @GetMapping("/helloWorldResponseList/{currentPage}/{perPage}/{SN}")
+    @GetMapping("/q/r/helloWorldResponseList/{currentPage}/{perPage}/{SN}")
     public ResponseEntity<Object> helloWorldResponseList(@PathVariable String currentPage, @PathVariable String perPage,
             @PathVariable String SN) {
         // "spm_row": 471, "SN": 1, "CMPNM": "로이유통", "RDNMADR": null
@@ -32,7 +32,7 @@ public class HelloworldControler {
         return ResponseEntity.ok().body(arrayList);
     }
 
-    @GetMapping("/helloWorldResponseWithException/{companyId}")
+    @GetMapping("/q/r/helloWorldResponseWithException/{companyId}")
     public ResponseEntity<Object> helloWorldResponseWithException(@PathVariable String companyId){
         try {
             int result = 5 / 0;
